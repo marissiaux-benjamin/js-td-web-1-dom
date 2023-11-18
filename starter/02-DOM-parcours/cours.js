@@ -15,6 +15,8 @@ de notre page web en utilisant la propriété childNodes
 (Aide : il s'agit du deuxième nœud enfant du sixième nœud enfant du nœud body)
 */
 
+document.body.childNodes[1];
+
 
 
 // 2. Sélection d'éléments selon leur balise
@@ -25,7 +27,8 @@ en utilisant la méthode getElementsByTagName()
 (Aide : il s'agit du premier titre h2 du document)
 - Afficher le nombre de titres h2 dans le document
 */
-
+document.getElementsByTagName('h2');
+console.log(document.querySelectorAll('h2'));
 
 
 // 3. Sélection d'éléments selon leur classe
@@ -34,14 +37,14 @@ en utilisant la méthode getElementsByTagName()
 l'ensemble des éléments du document ayant pour classe "merveilles"
 */
 
-
+console.log(document.querySelectorAll('.merveilles'));
 
 
 // 4. Sélection d'un élément selon son identifiant
 /* EXERCICE 4 :
 - Sélectionner et afficher l'élément du document portant l'identifiant "nouvelles"
 */
-
+console.log(document.querySelector('#nouvelles'));
 
 
 // 5. Chaînage de méthodes
@@ -50,8 +53,10 @@ l'ensemble des éléments du document ayant pour classe "merveilles"
 	le nombre d'enfants de l'élément d'id "antiques" ayant la classe "existe" 
 - Afficher l'enfant en question
 */
-// Affiche le nombre d'enfants de l'élément d'identifiant "antiques" ayant la classe "existe"
 
+console.log(document.getElementById('antiques').getElementsByClassName('existe'));
+
+// Affiche le nombre d'enfants de l'élément d'identifiant "antiques" ayant la classe "existe"
 
 // Affiche l'enfant de l'élément d'id "antiques" ayant la classe "existe"
 
@@ -66,6 +71,7 @@ en définissant un sélecteur identique à celui qu'on utiliserait dans une feui
 Elle renvoie la liste des éléments correspondant au sélecteur passé en paramètre.
 */
 
+
 /* EXERCICE 6a : Sélectionner et afficher, grâce à la méthode querySelectorAll(),
 - Le nombre de paragraphes du document
 - Le premier paragraphe du document
@@ -77,13 +83,13 @@ Elle renvoie la liste des éléments correspondant au sélecteur passé en param
 */
 
 // Nombre de paragraphes
-
+console.log(document.querySelectorAll('p'));
 
 // Le premier paragraphe
-
+console.log(document.querySelector('p'));
 
 // Nombre de paragraphes à l'intérieur de l'élément d'id "contenu"
-
+console.log(document.)
 
 // Le 2e paragraphe à l'intérieur de l'élément d'id "contenu"
 
