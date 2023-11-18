@@ -83,25 +83,31 @@ Elle renvoie la liste des éléments correspondant au sélecteur passé en param
 */
 
 // Nombre de paragraphes
-console.log(document.querySelectorAll('p'));
+console.log(document.getElementsByTagName('p'));
 
 // Le premier paragraphe
-console.log(document.querySelector('p'));
+console.log(document.querySelector('#contenu p'));
 
 // Nombre de paragraphes à l'intérieur de l'élément d'id "contenu"
-console.log(document.)
+console.log(document.querySelectorAll('#contenu p'));
 
 // Le 2e paragraphe à l'intérieur de l'élément d'id "contenu"
-
+console.log(document.querySelector('#contenu').childNodes[9]);
 
 // Nombre d'éléments ayant la classe "existe"
+
+console.log(document.getElementsByClassName('existe'));
+
 
 
 // Tous les éléments ayant la classe "existe"
 
+console.log(document.querySelectorAll('.existe'));
 
 
 // Nombre d'enfants de l'élément d'id "antiques" ayant la classe "existe"
+
+console.log(document.getElementById('antiques').children);
 
 
 // 6. b) La méthode querySelector()
@@ -114,10 +120,10 @@ La méthode querySelector() fonctionne comme querySelectorAll(), mais elle renvo
 */
 
 // Le premier paragraphe du document
-
+console.log(document.querySelector('p'));
 
 // Le premier (et seul) enfant de l'élément d'id "antiques" ayant la classe "existe"
-
+console.log(document.querySelector('#antiques').getElementsByClassName('existe'));
 
 /***********************************************
  **********/
@@ -134,10 +140,11 @@ La propriété innerHTML permet de récupérer tout le contenu HTML d'un éléme
 */
 
 // Le contenu HTML de l'élément identifié par "contenu"
+console.log(document.getElementById('contenu').innerHTML);
 
 
 // Le contenu HTML de l'ul qui n'a pas la classe "merveilles"
-
+console.log(document.querySelector('ul:not(.merveilles)').innerHTML);
 
 
 // 2. Le contenu textuel
