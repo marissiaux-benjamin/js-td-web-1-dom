@@ -15,7 +15,8 @@ EXERCICE 1 : Afficher dans la console
 - l'objet body du DOM (représentant l'élément <body>) 
 - le titre du document
 */
-
+console.log(document.head);
+console.log(document.body);
 
 
 
@@ -36,6 +37,9 @@ Afficher la valeur de la propriété nodeType du body dans la console
 (N.B. pour comprendre le résultat affiché, voir la documentation du MDN sur nodeType
 https://developer.mozilla.org/fr/docs/Web/API/Node/nodeType)
 */
+if (document.body.nodeType === 1){
+    console.log('body est bien un noeud élément.');
+}
 
 
 
@@ -44,7 +48,7 @@ https://developer.mozilla.org/fr/docs/Web/API/Node/nodeType)
 
 // 3. Accéder aux enfants d'un nœud élément
 /*
-Chaque objet du DOM de type élément possède une propriétéchildNodes.
+Chaque objet du DOM de type élément possède une propriété childNodes.
 Il s'agit d'une collection ordonnée regroupant tous ses nœuds enfants sous la forme d'objets DOM.
 On peut utiliser cette collection un peu comme un tableau pour accéder aux différents enfants d'un nœud.
 */
@@ -57,13 +61,13 @@ Accéder aux enfants d'un nœud. Afficher :
 */
 
 // Affiche le premier enfant du noeud body
-
+console.log(document.body.childNodes[1]);
 
 // Affiche le deuxième enfant du noeud body
-
+console.log(document.body.childNodes[3]);
 
 // Affiche les noeuds enfants du noeud body
-
+console.log(document.body.childNodes);
 
 
 // 4. Accéder au parent d'un nœud
@@ -79,7 +83,8 @@ Accéder au parent d'un nœud. Afficher
 */
 
 // Affiche le parent du noeud h1
-
+console.log(document.querySelector('h1').parentNode);
 
 
 // Accès au parent du noeud document ?
+console.log(document.body.parentNode);
