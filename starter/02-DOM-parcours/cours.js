@@ -157,9 +157,10 @@ La propriété textContent renvoie tout le contenu textuel d'un élément du DOM
 */
 
 // Le contenu textuel de l'élément identifié par "contenu"
-
+console.log(document.getElementById('contenu').textContent);
 
 // Le contenu textuel de l'élément identifié par "contenu"
+console.log(document.querySelector('ul:not(.merveilles)').textContent);
 
 
 
@@ -176,16 +177,15 @@ La propriété textContent renvoie tout le contenu textuel d'un élément du DOM
 - Vérifier, grâce à la méthode hasAttribute(), la présence de l'attribut target sur le premier lien du document 
 */
 // Affiche l'attribut href du premier lien
-
+console.log(document.querySelector('a').getAttribute('href'));
 
 // Affiche l'identifiant de la première liste
-
+console.log(document.querySelector('ul').getAttribute('id'));
 
 // Affiche l'attribut href du premier lien
 
-
 // Vérifie la présence de l'attribut target sur le premier lien
-
+console.log(document.querySelector('a').hasAttribute('target'));
 
 
 // 4. Les classes
@@ -203,13 +203,13 @@ La propriété textContent renvoie tout le contenu textuel d'un élément du DOM
 */
 
 // Liste des classes de l'élément identifié par "antiques"
-
+console.log(document.getElementById('antiques').classList);
 
 // Affiche le nombre de classes que possède l'élément d'id "antiques"
-
+console.log(document.getElementById('antiques').classList.length);
 
 // Affiche la première classe que possède l'élément d'id "antiques"
-
+console.log(document.querySelector('#antiques').className);
 
 // Teste si l'élément d'id "antiques" possède la classe "merveille"
-
+console.log(document.getElementById('antiques').classList.contains('.merveilles'));
