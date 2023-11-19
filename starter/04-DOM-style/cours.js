@@ -34,6 +34,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
 	* centrez-le autour d'une largeur de 5em;
 	* centrez-y le texte ;
 */
+document.querySelector('p').style.color = '#D8E000';
+document.querySelector('p').style.padding = '0.5em';
+document.querySelector('p').style.fontFamily = 'Baskerville, Garamond';
+document.querySelector('p').style.fontSize = '2em';
+document.querySelector('p').style.margin = '5em';
+document.querySelector('p').style.textAlign = 'center';
+
+
 
 
 
@@ -49,6 +57,12 @@ elle ne permet donc pas d'accéder aux styles qui se trouvent dans une feuille d
 /* EXERCICE 2 :
 Affichez la couleur du texte de chacun des trois paragraphes de la page
 */
+const paragraphes = document.getElementsByTagName('p');
+console.log(paragraphes[0].style.color);
+console.log(paragraphes[1].style.color);
+console.log(paragraphes[2].style.color);
+
+//console.log(document.body.children.style.color);
 
 // 1. Les limites de la propriété style
 
@@ -64,3 +78,11 @@ La fonction window.getComputedStyle() (https://developer.mozilla.org/fr/docs/Web
 /* EXEFCICE 3 :
 Affichez la police de caractère et la couleur du 3e paragraphe (qui a l'id "para")
 */
+const dernierP = window.getComputedStyle(document.getElementById("para"));
+console.log(dernierP.fontStyle);
+console.log(dernierP.color);
+
+
+
+
+
