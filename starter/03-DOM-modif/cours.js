@@ -22,9 +22,12 @@ EXERCICE 1 :
 	(Aide : on lui ajoute (opérateur+=) une entrée sous la forme d'une balise <li>)
 3. Vider la liste de tout son contenu et la réafficher
 */
+let ulElt = document.getElementById('langages');
+console.log(ulElt);
 
+document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 
-
+//document.getElementById('langages').innerHTML = '';
 
 
 // 2. Le contenu textuel
@@ -36,8 +39,7 @@ EXERCICE 2 :
 Compléter le titre du document pour qu'il devienne
 "Quelques langages de programmation" et le réafficher
 */
-
-
+document.querySelector('title').textContent += ' de programmation';
 
 
 // 3. Les attributs
@@ -54,8 +56,10 @@ EXERCICE 3 :
 	- via la propriété id de l'élément h1
 */
 
+const titreElt = document.querySelector('h1');
+console.log(titreElt);
 
-
+titreElt.setAttribute('id', 'titre');
 
 // 4. Les classes
 /*
@@ -73,7 +77,11 @@ EXERCICE 4 :
 - L'afficher
 */
 
+const titreElt2 = document.querySelector('h1');
+titreElt2.classList.remove('debut');
+titreElt2.classList.add('titre');
 
+console.log(document.querySelector('h1'));
 
 
 /*
@@ -85,9 +93,14 @@ EXERCICE 5 :
 - Retester le script
 */
 
+const liElt = document.querySelector('li');
+if (liElt.className === 'hide') {
+    liElt.classList.remove('hide');
+} else if (liElt.className !== 'hide') {
+    liElt.classList.add('hide');
+}
 
-
-
+console.log(document.querySelector('li'));
 
 /***********************************************
  **********/
@@ -121,17 +134,26 @@ Ajouter le langage "ruby" à la liste des langages :
 - 4. Afficher le contenu HTML de l'ul
 */
 
+let rubyElt = document.createElement('li');
+rubyElt.textContent = 'ruby';
+rubyElt.setAttribute('id', 'Python');
+document.querySelector('ul').appendChild(rubyElt);
+console.log(document.querySelector('#langages').innerHTML);
 
 
 
 // 2. Variantes pour ajouter un élément
 
 // 2.1. Création d'un noeud textuel avec la méthode createTextNode()
-
+let perlElt = document.createElement('li');
+perlElt.id = 'perl';
+perlElt.appendChild(document.createTextNode('Perl'));
+//document.getElementById('langages').appendChild(perlElt);
+console.log(document.querySelector('#langages').innerHTML);
 
 
 // 2.2. Ajout d'un noeud avant un autre noeud avec la méthode insertBefore()
-
+document.getElementById('langages').insertBefore(perlElt, document.getElementById('csharp'))
 
 
 // 2.3. Choix de la position exacte du nouveau noeud
@@ -151,10 +173,8 @@ Ajouter le langage "JavaScript" au tout début de la liste des langages
 dans une li d'id "javascript" avec la méthode insertAdjacentHTML()
 puis afficher le contenu HTML de l'ul
 */
-
-
-
-
+document.getElementById('langages').insertAdjacentHTML('afterbegin', '<li id="javascript">Javascript</li>');
+console.log(document.querySelector('ul').innerHTML);
 
 /***********************************************
  **********/
@@ -172,9 +192,11 @@ EXERCICE 8 :
 - Remplacer le langage C# par un nouvel élément correspondant au langage CSS
 - Afficher le contenu HTML de la liste ainsi modifiée
 */
-
-
-
+const cssElt = document.createElement('li');
+cssElt.id = 'css';
+cssElt.textContent = 'CSS';
+document.getElementById('langages').replaceChild(cssElt ,document.getElementById('csharp'));
+console.log(document.getElementById('langages').innerHTML);
 
 
 // 2. Supprimer un noeud existant
@@ -187,6 +209,8 @@ EXERCICE 9 :
 - Supprimer l'élément correspondant au langage CSS que vous venez d'insérer
 - Réaffichez la liste des langages
 */
+document.getElementById('langages').removeChild(cssElt);
+console.log(document.getElementById('langages').innerHTML);
 
 
 
