@@ -79,7 +79,7 @@ La fonction window.getComputedStyle() (https://developer.mozilla.org/fr/docs/Web
 Affichez la police de caractère et la couleur du 3e paragraphe (qui a l'id "para")
 */
 const dernierP = window.getComputedStyle(document.getElementById("para"));
-console.log(dernierP.fontStyle);
+console.log(dernierP.fontFamily);
 console.log(dernierP.color);
 
 
