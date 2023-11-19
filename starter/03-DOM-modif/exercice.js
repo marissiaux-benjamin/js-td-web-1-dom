@@ -47,8 +47,4 @@ liste.appendChild(fifa);
 console.log(document.getElementById('jeux').children);
 
 
-const tableau = [document.getElementById('jeux').children];
-
-
-
 
