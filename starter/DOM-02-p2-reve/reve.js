@@ -9,7 +9,10 @@ SOURCE : https://github.com/oc-courses/javascript-web
 */
 
 // Insérez votre code ici
-
+function compterElements(attribut) {
+    const compter= document.querySelectorAll(attribut);
+    return compter.length;
+}
 
 
 console.log(compterElements("p")); // Doit afficher 4
