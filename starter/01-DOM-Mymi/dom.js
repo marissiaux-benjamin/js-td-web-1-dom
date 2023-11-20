@@ -37,7 +37,7 @@ console.log(impairs);
 
 
 /* d) compter le nombre de li de classe impair dans la page */
-
+console.log(impairs.length);
 
 
 /* 7. Cibler le 4e li puis, à partir de là, cibler son frère juste avant lui */
