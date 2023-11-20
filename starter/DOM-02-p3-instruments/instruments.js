@@ -19,6 +19,25 @@ SOURCE : https://github.com/oc-courses/javascript-web
     - si l'élément d'id "trompette" possède la classe "cuivre" (doit afficher true)
     - si l'élément d'id "contrebasse" possède la classe "cordes" (doit afficher "Aucun élément ne possède l'id contrebasse")
 */
+function getInfosLiens(balise) {
+    const selection = document.querySelectorAll(balise);
+    const premierLien = document.querySelector(balise);
+    const dernierLien = selection[selection.length - 1];
+    console.log(selection.length);
+    console.log(premierLien.getAttribute('href'));
+    console.log(dernierLien.getAttribute('href'));
+}
+
+
+const nouvLi = document.createElement('li');
+nouvLi.innerHTML = 'Le <a href="https://fr.wikipedia.org/wiki/Piano">piano</a>';
+nouvLi.setAttribute('id', 'piano');
+nouvLi.setAttribute('class', 'cordes frappées');
+document.querySelector('ul').appendChild(nouvLi);
+
+getInfosLiens('a');
+
+
 
 
 
