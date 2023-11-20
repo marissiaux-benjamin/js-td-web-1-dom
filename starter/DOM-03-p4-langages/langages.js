@@ -12,4 +12,8 @@ où le mot "liste" est un lien vers l'URL suivante :
 https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation.
 */
 
+const nouvP = document.createElement('p');
+nouvP.innerHTML = 'En voici une <a href="#">liste</a> plus complète';
+nouvP.setAttribute('class' , 'para1');
+document.getElementById('contenu').appendChild(nouvP);
 
