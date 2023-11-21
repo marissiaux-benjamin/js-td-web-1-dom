@@ -14,3 +14,25 @@ Vous disposez d’un fichier HTML qui contient une nav.
 		avec le texte qui précède le lien dans l’énoncé ci-dessus)
 AIDE : Utilisez une boucle for/in pour parcourir l'objet tutos
 */
+
+
+const tutos = {
+    tableauTutos: [
+         {
+            nom: 'Openclassrooms : Apprenez à coder avec JavaScript',
+            url: 'https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript'
+        },
+        {
+            nom: 'Openclassrooms : Apprenez à coder avec JavaScript',
+            url: 'https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript'
+        },
+        {
+            nom: 'Openclassrooms : Apprenez à coder avec JavaScript',
+            url: 'https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript'
+        }
+    ]
+};
+
+for (const tuto in tutos) {
+    console.log(`${tuto[tuto]}`);
+}
