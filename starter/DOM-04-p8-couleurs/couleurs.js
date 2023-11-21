@@ -12,15 +12,17 @@ DOM - PREPA 8 : « Couleurs » :
 2. Utilisez ces couleurs pour satisfaire les préférences de votre utilisateur
 */
 
-const couleur = prompt('Veuillez entrer une couleur pour le texte appliquer au titre (en anglais ou hexadecimal ou RGB): ');
 
-const tableauxCouleurs = ['#0a2cd6', '#fa7bfa', '#5caa68']
-if (couleur === tableauxCouleurs[0] || couleur === 'bleu'){
-    document.querySelector('h1').style.color = '#0a2cd6';
+const exo = {
+    couleur: prompt('Veuillez entrer une couleur pour le texte appliquer au titre (en anglais ou hexadecimal ou RGB): '),
+    fond: prompt('Veuillez entrer une couleur de fond pour le texte appliquer au titre (en anglais ou hexadecimal ou RGB): '),
+    couleurApplique() {
+        const titres = document.querySelectorAll('h1');
+        titres.forEach((titreE) => {
+            titreE.style.backgroundColor = this.fond;
+            titreE.style.color = this.couleur;
+        });
+
+    },
 }
-if (couleur === tableauxCouleurs[1] || couleur === 'rose'){
-    document.querySelector('h1').style.color = '#fa7bfa';
-}
-if (couleur === tableauxCouleurs[2] || couleur === 'vert'){
-    document.querySelector('h1').style.color = '#5caa68';
-}
+exo.couleurApplique();
