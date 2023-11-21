@@ -11,3 +11,16 @@ DOM - PREPA 8 : « Couleurs » :
    (utilisez soit le nom anglais de la couleur, soit le format hexadécimal, soit le format RGB) :' ;
 2. Utilisez ces couleurs pour satisfaire les préférences de votre utilisateur
 */
+
+const couleur = prompt('Veuillez entrer une couleur pour le texte appliquer au titre (en anglais ou hexadecimal ou RGB): ');
+
+const tableauxCouleurs = ['#0a2cd6', '#fa7bfa', '#5caa68']
+if (couleur === tableauxCouleurs[0] || couleur === 'bleu'){
+    document.querySelector('h1').style.color = '#0a2cd6';
+}
+if (couleur === tableauxCouleurs[1] || couleur === 'rose'){
+    document.querySelector('h1').style.color = '#fa7bfa';
+}
+if (couleur === tableauxCouleurs[2] || couleur === 'vert'){
+    document.querySelector('h1').style.color = '#5caa68';
+}
