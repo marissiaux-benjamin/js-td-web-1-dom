@@ -20,18 +20,18 @@ AIDE : utilisez la méthode forEach() pour parcourir le tableau de mots
 */
 
 const mots = {
-    tableauMots : [
+    tableauMots: [
         {
-            therme : 'Procrastination',
-            def : 'Tendance pathologique à remettre systématiquement au lendemain'
+            therme: 'Procrastination',
+            def: 'Tendance pathologique à remettre systématiquement au lendemain'
         },
         {
-            therme : 'Tautologie',
-            def : 'Phrase dont la formulation ne peut être que vraie'
+            therme: 'Tautologie',
+            def: 'Phrase dont la formulation ne peut être que vraie'
         },
         {
-            therme : 'Oxymore',
-            def : 'unit dans un même syntagme deux termes sémantiquement opposés'
+            therme: 'Oxymore',
+            def: 'unit dans un même syntagme deux termes sémantiquement opposés'
         }
     ]
 }
@@ -40,15 +40,21 @@ const creationListe = document.createElement('ul');
 creationListe.setAttribute('id', 'liste');
 document.getElementById('contenu').appendChild(creationListe);
 
-const lesLi = document.createElement('li');
-const lesLi2 = document.createElement('li');
-const lesLi3 = document.createElement('li');
-lesLi.innerHTML = mots[0];
-lesLi2.innerHTML = mots[1];
-lesLi3.innerHTML = mots[2];
-document.getElementById('liste').appendChild(lesLi);
-document.getElementById('liste').appendChild(lesLi2);
-document.getElementById('liste').appendChild(lesLi3);
+mots.tableauMots.forEach((motE) => {
+    const lesLi = document.createElement('li');
+    lesLi.textContent = motE;
+    document.getElementById('liste').appendChild(lesLi);
+
+    const lesLi2 = document.createElement('li');
+    lesLi2.textContent = motE;
+    document.getElementById('liste').appendChild(lesLi2);
+
+    const lesLi3 = document.createElement('li');
+    lesLi3.textContent = motE;
+    document.getElementById('liste').appendChild(lesLi3);
+});
+
+
 
 
 
